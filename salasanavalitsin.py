@@ -2,11 +2,11 @@ import random
 import string
 
 def generate_password():
-    nominit = ['pöytä', 'omena,', 'pyörä', 'ruusu', 'leppäkerttu',
-    'kenkä', 'puhelin', 'radio', 'jauho', 'kynsi', 'vesi', 'kivi']
+    nominit = ['pöytä', 'tuoli', 'omena,', 'päärynä', 'pyörä', 'ruuvi', 'ruusu', 'neilikka', 'leppäkerttu', 'perhonen',
+    'kenkä', 'sukka', 'puhelin', 'kello', 'radio', 'telkkari', 'jauho', 'jyvä', 'kynsi', 'tukka', 'vesi', 'öljy', 'kivi', 'puurunko']
 
-    adjektiivit = ['nopea', 'kiltti', 'iso', 'pimeä', 'tahmea', 'punainen',
-    'hiljas', 'jännittävä', 'kylmä', 'tuulinen', 'komea', 'kevyt', 'kiero']
+    adjektiivit = ['nopea', 'hitas', 'kiltti', 'tuhma', 'iso', 'pieni', 'pimeä', 'vaalea', 'tahmea', 'liukas', 'punainen', 'sininen',
+    'hiljas', 'äänekäs', 'jännittävä', 'tylsä', 'kylmä', 'lämmin', 'tuulinen', 'tyyni', 'komea', 'ruma', 'kevyt', 'painava', 'kiero', 'suora']
     
     while True:
         adjektiivi = random.choice(adjektiivit)
@@ -21,3 +21,5 @@ def generate_password():
 
 uusi_salasana = generate_password()
 print(uusi_salasana)
+
+# Testit
