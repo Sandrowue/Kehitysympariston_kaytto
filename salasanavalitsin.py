@@ -3,7 +3,7 @@ import string
 
 def generate_password():
     nominit = ['pöytä', 'tuoli', 'omena,', 'päärynä', 'pyörä', 'ruuvi', 
-               'ruusu', 'neilikka', 'leppäkerttu', 'perhonen',
+               'ruusu', 'neilikka', 'leppäkerttu', 'perhonen', 'kala', 'mökki',
                'kenkä', 'sukka', 'puhelin', 'kello', 'radio', 'telkkari', 'jauho', 
                'jyvä', 'kynsi', 'tukka', 'vesi', 'öljy', 'kivi', 'puurunko']
 
