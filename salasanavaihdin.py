@@ -2,7 +2,7 @@ import random
 import string
 import unittest
 
-runtest = 1
+runtest = 0
 
 def generate_password():
     nominit = ['pöytä', 'tuoli', 'omena,', 'päärynä', 'pyörä', 'ruuvi', 
@@ -22,11 +22,13 @@ def generate_password():
         erikoismerkki = random.choice(string.punctuation)
         
         salasana = adjektiivi + nomini + numero + erikoismerkki
-
+        '''print(min(nominit, key=len))'''
         print('salasanasi on: ' + salasana)
         return salasana
 
 uusi_salasana = generate_password()
+
+
 print(uusi_salasana)
 
 if runtest == 0:
