@@ -2,7 +2,7 @@ import random
 import string
 import unittest
 
-runtest = 0
+runtest = 1
 
 def generate_password():
     nominit = ['pöytä', 'tuoli', 'omena,', 'päärynä', 'pyörä', 'ruuvi', 
@@ -30,6 +30,8 @@ def generate_password():
                 break
             else:
                 return generate_password()
+        else:
+            return salasana
 
 
 if runtest == 0:
