@@ -23,13 +23,14 @@ def generate_password():
         
         salasana = adjektiivi + nomini + numero + erikoismerkki
         '''print(min(nominit, key=len))'''
+        
         print('salasanasi on: ' + salasana)
-        return salasana
+        vastaus = input('Haluatko toisen salasanan? Vastaa k tai e: ')
+        if vastaus == 'k':
+            generate_password()
+        else:
+            return salasana
 
-uusi_salasana = generate_password()
-
-
-print(uusi_salasana)
 
 if runtest == 0:
     generate_password()
