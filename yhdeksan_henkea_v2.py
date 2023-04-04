@@ -9,8 +9,9 @@ def yhdeksan_henkea(guess_test):
         secret_word = random.choice(words)
     if runtest == 1:
         secret_word = guess_test
-    print(secret_word)
+        print(secret_word)
     clue = list('?????') 
+    clue_str = ''.join(clue)
     heart_symbol = u'\u2764'
     guessed_word_correctly = False
 
