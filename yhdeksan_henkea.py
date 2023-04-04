@@ -7,8 +7,11 @@ def yhdeksan_henkea(guess_test):
     words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
             'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
             'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
-    secret_word = random.choice(words)
-    print(secret_word)
+    if runtest == 0:
+        secret_word = random.choice(words)
+    if runtest == 1:
+        secret_word = guess_test
+        print(secret_word)
     clue = list('?????') 
     heart_symbol = u'\u2764'
     guessed_word_correctly = False
