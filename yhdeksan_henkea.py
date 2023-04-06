@@ -5,7 +5,7 @@ import random
 import unittest
 
 runtest = 1
-def yhdeksan_henkea(guess_test):
+def yhdeksan_henkea(guess_test, guess_test2):
     lives = 9
     words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
             'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
@@ -34,9 +34,12 @@ def yhdeksan_henkea(guess_test):
             guess = input(' Arvaa kirjain tai koko sana: ')
         if runtest == 1:
             guess = guess_test
+            if guess_test2 != 0:
+                '''guess = guess_test2'''
         if guess in secret_word:
             update_clue(guess, secret_word, clue)
             clue_str = ''.join(clue)
+            
         else:
             print('Vaarin. Menetit yhden hengen.')
             lives = lives - 1
@@ -57,7 +60,7 @@ class test_yhdeksan_henkea(unittest.TestCase):
             'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
             'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
         for i in words:
-            actual = yhdeksan_henkea(i)
+            actual = yhdeksan_henkea(i, 0)
             expected = i
             print('actual = ', actual)
             self.assertIn(actual, expected)
@@ -69,7 +72,7 @@ class test_yhdeksan_henkea(unittest.TestCase):
         'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
         for i in words:
             for j in (i):
-                actual = yhdeksan_henkea(j)
+                actual = yhdeksan_henkea(i, j)
                 expected = j
                 print('actual = ', actual)
                 self.assertIn(actual, expected)
