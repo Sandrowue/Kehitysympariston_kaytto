@@ -5,7 +5,7 @@ import random
 import unittest
 
 runtest = 1
-def yhdeksan_henkea(guess_word, guess_char):
+def yhdeksan_henkea(guess_word):
     lives = 9
     words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
             'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
@@ -13,8 +13,8 @@ def yhdeksan_henkea(guess_word, guess_char):
     if runtest == 0:
         secret_word = random.choice(words)
     if runtest == 1:
-                secret_word = guess_word
-                print(secret_word)
+        secret_word = guess_word
+        print(secret_word)
     clue = list('?????') 
     clue_str = ''.join(clue)
     heart_symbol = u'\u2764'
@@ -33,16 +33,11 @@ def yhdeksan_henkea(guess_word, guess_char):
         if runtest == 0:
             guess = input(' Arvaa kirjain tai koko sana: ')
         if runtest == 1:
-            if guess_char == None:
-                guess = guess_word
-            else:
-                guess = guess_char
-        
-
+            guess = guess_word
+            
         if guess in secret_word:
             update_clue(guess, secret_word, clue)
             clue_str = ''.join(clue)
-            
                         
         else:
             print('Vaarin. Menetit yhden hengen.')
@@ -64,22 +59,13 @@ class test_yhdeksan_henkea(unittest.TestCase):
                 'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
                 'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
         for i in words:
-            actual = yhdeksan_henkea(i, None)
+            actual = yhdeksan_henkea(i)
             expected = i
             print('actual = ', actual)
             self.assertIn(actual, expected)
 
             
-    def test_yhdeksan_henkea_success2(self):
-        words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
-                'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
-                'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
-        for i in words:
-            for j in (i):
-                actual = yhdeksan_henkea(i, j)
-                expected = j
-                print('actual = ', actual)
-                self.assertIn(actual, expected)
+
 
 
 # python -m unittest yhdeksan_henkea
