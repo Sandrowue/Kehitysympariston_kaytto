@@ -1,3 +1,6 @@
+# yhdeksan_henkea
+# Sandro Wüthrich
+
 import random
 import unittest
 
@@ -58,3 +61,18 @@ class test_yhdeksan_henkea(unittest.TestCase):
             expected = i
             print('actual = ', actual)
             self.assertIn(actual, expected)
+
+            
+    def test_yhdeksan_henkea_success2(self):
+        words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
+        'jalka', 'pyora', 'ankka', 'koivu', 'ahven', 'purje',
+        'varsi', 'ruuvi', 'ruoka', 'ruusu', 'maito', 'lahde']
+        for i in words:
+            for j in (i):
+                actual = yhdeksan_henkea(j)
+                expected = j
+                print('actual = ', actual)
+                self.assertIn(actual, expected)
+
+
+# python -m unittest yhdeksan_henkea
