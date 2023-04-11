@@ -68,4 +68,4 @@ class test_yhdeksan_henkea(unittest.TestCase):
 
 
 
-# python -m unittest yhdeksan_henkea
+# python -m unittest yhdeksan_henkea_sanaloop_test.py
