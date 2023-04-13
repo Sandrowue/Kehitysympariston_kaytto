@@ -1,7 +1,7 @@
 import turtle as t
 
 def rectangle (horizontal, vertical, color):
-    t.pendown
+    t.pendown()
     t.pensize(1)
     t.color (color)
     t.begin_fill()
@@ -11,8 +11,8 @@ def rectangle (horizontal, vertical, color):
         t.right(90)
         t.forward(vertical)
         t.right(90)
-    t.end_fill
-    t.penup
+    t.end_fill()
+    t.penup()
 
 t.penup()
 t.speed('fastest')
@@ -22,7 +22,7 @@ t.bgcolor('orange')
 print('ikkunan korkeus = ', t.window_height())
 print('ikkunan leveys = ', t.window_width())
 
-# jalkaterät
+# jalkaterat
 t.goto(-100, -150)
 rectangle(50, 20, 'blue')
 t.goto(-30, -150)
@@ -30,7 +30,7 @@ rectangle(50, 20, 'blue')
 
 # jalat
 t.goto(-25, -50)
-rectangle(15, 20, 'grey')
+rectangle(15, 100, 'grey')
 t.goto(-55, -50)
 rectangle(-15, 100, 'grey')
 
@@ -38,21 +38,27 @@ rectangle(-15, 100, 'grey')
 t.goto(-90, 100)
 rectangle(100, 150, 'red')
 
-# käsivarret
+# kasivarret oikea
 t.goto(-150, 70)
 rectangle(60, 15, 'grey')
 t.goto(-150, 110)
+rectangle(15, 40, 'grey')
+
+# kasivarret vasein
+t.goto(10, 70)
+rectangle(60, 15, 'grey')
+t.goto(55, 110)
 rectangle(15, 40, 'grey')
 
 # kaula
 t.goto(-50, 120)
 rectangle(15, 20, 'grey')
 
-# pää
+# paa
 t.goto(-85, 170)
 rectangle(80, 50, 'red')
 
-# silmät
+# silmat
 t.goto(-60, 160)
 rectangle(30, 10, 'white')
 t.goto(-55, 155)
