@@ -1,3 +1,6 @@
+#Robottipaja
+#Sandro Wüthrich
+
 import turtle as t
 
 def rectangle (horizontal, vertical, color):
