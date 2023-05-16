@@ -21,7 +21,7 @@ def draw_star (points, size, col, x, y):
         t.forward(size)
         t.right(angle)
     t.end_fill()
-    print(x,7)
+    
 
 # Paaohjelma
 def tahtikirkasyo():
@@ -44,7 +44,7 @@ def tahtikirkasyo():
         draw_star(ranPts, ranSize, ranCol, ranX, ranY)
 
         if runtest == 1:
-            output = [ranX.real+50, ranY.real+50]
+            output = [ranX.real+ranSizeMax, ranY.real+ranSizeMax]
             return output
         
 if runtest == 0:
