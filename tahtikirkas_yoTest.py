@@ -44,7 +44,7 @@ def tahtikirkasyo():
         draw_star(ranPts, ranSize, ranCol, ranX, ranY)
 
         if runtest == 1:
-            output = [ranX.real, ranY.real]
+            output = [ranX.real+50, ranY.real+50]
             return output
         
 if runtest == 0:
