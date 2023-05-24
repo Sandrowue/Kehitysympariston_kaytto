@@ -3,7 +3,7 @@ from random import randint, random
 import unittest
 
 
-runtest = 1
+runtest = 0
 
 def draw_star (points, size, col, x, y):
     t.speed('slow')
