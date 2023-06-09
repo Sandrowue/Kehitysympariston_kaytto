@@ -115,21 +115,21 @@ def timediff_no_overnight(t1, t2):
     hours = seconds / 3600 # minute = 60 seconds, hour 60 minutes
     return hours
 
-def timediff_choose_unit(t1, t2, unit):
+def timediff_choose_unit(stratTime, endTime, unit):
     """Calculates difference between two time values (day, minute or second)
 
     Args:
-        ti (str): time value in format hh:mm:ss
-        t2 (str): time value in format hh:mm:ss
-        unit (str): unit to return
+        startTime (str): time value in format hh:mm:ss
+        endTime (str): time value in format hh:mm:ss
+        unit (str): unit to return (hour, minute, second)
 
     Returns:
         float: time difference in chosen units
     """
-    t1 = datetime.datetime.strptime(t1, "%H:%M:%S")
-    t2 = datetime.datetime.strptime(t2, "%H:%M:%S")
+    stratTime = datetime.datetime.strptime(stratTime, "%H:%M:%S")
+    endTime = datetime.datetime.strptime(endTime, "%H:%M:%S")
     units = {'hour': 3600, 'minute': 60, 'second': 1}
-    seconds = abs((t2 - t1).seconds)
+    seconds = abs((endTime - stratTime).seconds)
     divider = units[unit]
     value = seconds / divider
     return value
