@@ -4,7 +4,7 @@
 import random
 import unittest
 
-runtest = 1
+runtest = 0
 def yhdeksan_henkea(guess_word):
     lives = 9
     words = ['pizza', 'keiju', 'sorsa', 'kieli', 'paita', 'kirje', 
